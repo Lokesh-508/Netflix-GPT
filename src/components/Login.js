@@ -5,13 +5,14 @@ import { useRef } from 'react';
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword,updateProfile} from "firebase/auth";
 import {auth} from '../utils/firebase';
-import { useNavigate } from 'react-router';
+import { USER_AVATAR } from '../utils/constants';
+
 import { useDispatch } from 'react-redux';
 import  {addUser} from '../utils/userSlice'
 const Login = () => {
          const [isSignInForm,setIsSignInForm]= useState(true);
          const [errorMessage, setErrorMessage]=useState(null);
-          const navigate = useNavigate();
+   
          const name=useRef(null);
          const email = useRef(null);
          const password = useRef(null);
@@ -41,7 +42,7 @@ const Login = () => {
                   // Signed up 
                 const user = userCredential.user;
                 updateProfile(user, {
-                  displayName: name.current.value, photoURL: "https://media.licdn.com/dms/image/D5603AQEs4Rzl-8itjw/profile-displayphoto-shrink_400_400/0/1695215901359?e=1707955200&v=beta&t=-mPHHY67MDO_t0gyePUvbTwB_v1yttOhcZy3R3gkfX4"
+                  displayName: name.current.value, photoURL: USER_AVATAR
                 }).then(() => {
                   // Profile updated!
                   // ...
@@ -53,16 +54,15 @@ const Login = () => {
                     displayName:displayName,
                     photoURL:photoURL,
                   }));
-                  navigate("/browse");
+                 
                 }).catch((error) => {
                   // An error occurred
                   // ...
                   setErrorMessage(error);
                 });
                 
-                 console.log(user);
-                 navigate("/browse");
-    // ...
+             
+    
                 })
                   .catch((error) => {
                   const errorCode = error.code;
@@ -78,8 +78,7 @@ const Login = () => {
 
               // Signed in 
                 const user = userCredential.user;
-                console.log(user);
-                navigate("/browse");
+              
               
                 
                
