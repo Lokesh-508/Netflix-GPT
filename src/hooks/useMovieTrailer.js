@@ -18,7 +18,7 @@ import { useEffect } from "react";
         );
 
         const json =await data.json();
-        console.log(json);
+      
            
          // my changes made
         //  var filterData=null;
@@ -27,7 +27,7 @@ import { useEffect } from "react";
   : [null];
         // const filterData =json.results.filter((video)=> video.type==="Trailer");
         const trailer=filterData.length ? filterData[0]:json.results[0];
-        console.log(trailer);
+       
       
         dispatch(addTrailerVideo(trailer));
     };
