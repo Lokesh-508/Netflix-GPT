@@ -9,6 +9,7 @@ import { USER_AVATAR } from '../utils/constants';
 
 import { useDispatch } from 'react-redux';
 import  {addUser} from '../utils/userSlice'
+import { BG_URL } from '../utils/constants';
 const Login = () => {
          const [isSignInForm,setIsSignInForm]= useState(true);
          const [errorMessage, setErrorMessage]=useState(null);
@@ -100,7 +101,7 @@ const Login = () => {
     <div className="absolute">
         <Header/>
         
-        <img className='w-screen  object-cover' src="https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/5b22968d-b94f-44ec-bea3-45dcf457f29e/IN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background-img"/>
+        <img className='w-screen  object-cover' src={BG_URL} alt="bg image"/>
     </div>
      <form onSubmit={(e)=>e.preventDefault()} className="w-3/12 absolute p-4  px-8 bg-black my-28 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
         <h1 className='font-bold text-3xl py-4'>{isSignInForm ? "Sign In":"Sign Up"}</h1>
