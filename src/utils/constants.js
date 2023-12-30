@@ -5,7 +5,8 @@ export const API_OPTIONS= {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzkyMmQ0NDBlMWQzZjAyYmI2ZWE5YWQ2MWYzZDQ0OSIsInN1YiI6IjY1N2M4ZjA1NjNlNmZiMDBlM2NkZmNiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZOvnT7Z_ASFTd00AFdJHDRd0df9bE_53GZQbw81Ndbw'
+      // Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+      Authorization :'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzkyMmQ0NDBlMWQzZjAyYmI2ZWE5YWQ2MWYzZDQ0OSIsInN1YiI6IjY1N2M4ZjA1NjNlNmZiMDBlM2NkZmNiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZOvnT7Z_ASFTd00AFdJHDRd0df9bE_53GZQbw81Ndbw'
     }
   };
 
@@ -19,4 +20,11 @@ export const API_OPTIONS= {
     { identifier: "hindi", name: "Hindi" },
     { identifier: "sanskrit", name: "Sanskrit" },
     { identifier: "spanish", name: "Spanish" },
+    
   ];
+
+
+  // export const OPENAI_KEY="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";
+// export const OPENAI_KEY="  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"
+
+export const OPENAI_KEY="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"
