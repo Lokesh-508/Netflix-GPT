@@ -26,4 +26,5 @@ export const API_OPTIONS= {
 
   
 
-export const OPENAI_KEY=process.env.OPENAI_KEY
+// export const OPENAI_KEY=process.env.OPENAI_KEY
+export const OPENAI_KEY='sk-bEiUCmZf5TbMm4XJYtHqT3BlbkFJDRwt4aDUMMYOHWDSei9THz'
