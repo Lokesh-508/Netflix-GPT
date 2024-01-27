@@ -24,7 +24,6 @@ export const API_OPTIONS= {
   ];
 
 
-  // export const OPENAI_KEY="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";
-// export const OPENAI_KEY="  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"
+  
 
-export const OPENAI_KEY="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"
+export const OPENAI_KEY=process.env.OPENAI_KEY
